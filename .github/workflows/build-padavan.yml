@@ -70,6 +70,7 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_NAPT66/d' configs/templates/$TNAME.config       #删除配置项NAPT66
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SRELAY/d' configs/templates/$TNAME.config       #删除配置项SRELAY
         sed -i '/CONFIG_FIRMWARE_INCLUDE_MENTOHUST/d' configs/templates/$TNAME.config    #删除配置项MENTOHUST
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_MINIEAP/d' configs/templates/$TNAME.config      #删除配置项MINIEAP
         ####################################################################
         # 以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到.config文件。
         ####################################################################
@@ -89,6 +90,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_NAPT66=y" >> configs/templates/$TNAME.config       #添加用于二级路由、教育网分发IPv6地址的NAPT66
         echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> configs/templates/$TNAME.config       #删除SRELAY
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=y" >> configs/templates/$TNAME.config    #添加MENTOHUST
+        echo "CONFIG_FIRMWARE_INCLUDE_MINIEAP=y" >> configs/templates/$TNAME.config      #添加MINIEAP
         #########################################################################################
         # 自定义添加其它功能请参考源码configs/templates/目录下的config文件。按照上面的格式添加即可
         # 格式如下：
